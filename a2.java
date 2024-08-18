@@ -28,3 +28,4 @@ class A
 		System.out.println(ob.flag1);
 	}	
 }
+
