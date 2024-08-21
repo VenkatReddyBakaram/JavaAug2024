@@ -26,7 +26,7 @@ class A
 	
 	double div(double a, double b)
 	{
-		return a/b;
+		return a/b;		
 	}
 	
 	
@@ -39,6 +39,6 @@ class A
 		int res = ob.mul();
 		System.out.println(res);
 		double r = ob.div(10,3);
-		System.out.println(r)	
+		System.out.println(r);	
 	}
 }
