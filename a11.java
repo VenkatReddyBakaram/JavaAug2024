@@ -8,7 +8,7 @@ class B{
 	}
 }
 
-class A
+class A3
 {
 	static 
 	{

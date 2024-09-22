@@ -1,22 +1,32 @@
-class A
-{
+package com.vtech.coreApps;
 
-	public static void main(String args[])
-	{
-		
-		int a=400; // local variable
-		int b; //Ignored by the JVM, because it is not accessing anywhere
-		int c=100;
-		
-		
-		System.out.println(a);
-	}	
-	//System.out.println(c); error, as we cannot access local variable out side of the function
+class I1 {
+
+    void f1() {
+        System.out.println("f1()-method responding from class I1");
+    }
 }
-/*
-1.Local variable must be initialized i.e assigned with some value.
-2.Local varialble should be accessed only inside of the function i.e main()
-because local variable scope will be with in the function.
-3.Though declared local variable and not accessing, then it is ignored by the JVM.
-*/
 
+class I2 extends I1 {
+
+    void f2() {
+        f1();
+        System.out.println("f2()-method responding from class I2");
+    }
+}
+
+class I3 extends I2 {
+
+    void f3() {
+        f2();
+        System.out.println("f3()-method responding from class I3");
+    }
+}
+
+public class A1 {
+
+    public static void main(String[] args) {
+        I3 ob = new I3();
+        ob.f3();
+    }
+}
